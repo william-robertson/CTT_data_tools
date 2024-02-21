@@ -3,10 +3,10 @@ library(DBI)
 start <- Sys.time()
 
 ####SETTINGS#####
-my_token <- "your token here"
-db_name <- "mydb"
-myproject <- "CTT Project Name" #this is your project name on your CTT account
-conn <- dbConnect(RPostgres::Postgres(), dbname=db_name)
+my_token <- "f98853d782f0f4d4a823ca4f1b17dfbe589fb5d7b2b4e73d65036475adc0fa07"
+db_name <- "Turtles"
+myproject <- "PA Temperature Forest Turtles" #this is your project name on your CTT account
+conn <- dbConnect(RPostgres::Postgres(), dbname=db_name,port = 5432, user = "wor5079", password = "$n@ppinTurtl3")
 ################
 
 get_my_data(my_token, "~/Documents/data/radio_projects/myproject" , conn, myproject) #the folder path is where you want your downloaded files to go
