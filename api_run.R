@@ -10,7 +10,7 @@ conn <- dbConnect(RPostgres::Postgres(), dbname=db_name,port = 5432, user = "wor
 ################
 
 get_my_data(my_token, "C:/pg_Data/Data" , conn, myproject) #the folder path is where you want your downloaded files to go
-outpath <- "C:/pg_Data/base/16398"
+outpath <- "C:/pg_Data/Data"
 update_db(conn, outpath, myproject)
 dbDisconnect(conn)
 
