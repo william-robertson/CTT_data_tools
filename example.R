@@ -26,10 +26,10 @@ source("functions/node_health.R")
 #It can contain any/all of your downloaded data files, just don't manipulate/add your own unrelated/altered files.
 #Unzip any zipped directories therein, but compressed csv files (csv.gz) don't need to be unzipped
 
-infile <- "~/C:/pg_Data/Data"
+infile <- "C:/pg_Data/Data/PA Temperature Forest Turtles/V30B0154DCFB/rawsub"
 
 #This is where you want your output to go
-outpath <- "~/C:/Users/wor5079/OneDrive - The Pennsylvania State University/MASTERS/CTT/CTT_data_tools"
+outpath <- "C:/Users/wor5079/OneDrive - The Pennsylvania State University/MASTERS/CTT/CTT_data_tools"
 
 freq <- "1 hour" #interval to summarize node health indicators of interest
 

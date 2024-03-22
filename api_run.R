@@ -9,7 +9,7 @@ myproject <- "PA Temperature Forest Turtles" #this is your project name on your 
 conn <- dbConnect(RPostgres::Postgres(), dbname=db_name,port = 5432, user = "wor5079", password = "$n@ppinTurtl3")
 ################
 
-get_my_data(my_token, "C:/pg_Data/Data" , conn, myproject) #the folder path is where you want your downloaded files to go
+get_my_data(my_token, "C:/pg_Data/Data" , conn, myproject, mystation = "V30B0154DCFB") #the folder path is where you want your downloaded files to go
 outpath <- "C:/pg_Data/Data"
 update_db(conn, outpath, myproject)
 dbDisconnect(conn)
