@@ -54,10 +54,10 @@ rm(list=ls())
 
 ### Set by User
 # Working Directory - Provide/path/on/your/computer/where/master/csv/file/of/tags/and/nodes/is/found/and/where/Functions_CTT.Network.R/is/located
-working.directory <- "add here "
+working.directory <- "C:/Users/wor5079/OneDrive - The Pennsylvania State University/MASTERS/CTT/CTT_data_tools/EcoEvo_PaxtonOptimization_example/Manipulation"
 
 # Directory for Output data - Provide/path/where/you/want/output/data/to/be/stored/
-outpath <- "add here - make sure it ends with a / "
+outpath <- "C:/pg_Data/calibation_beepdata/"
 
 
 # Bring in functions 
@@ -100,12 +100,12 @@ str(nodes) # check that data imported properly
 
 
 # Variables to define for function - replace values below with user specified values -
-INFILE <- "/Users/kpaxton/DataFiles_CTT/Guam Sali"
+INFILE <- "C:/pg_Data/Data/PA Temperature Forest Turtles"
 NODE.VERSION <- 2
-RADIOID <- c(1,2)
-TIMEZONE <- "Pacific/Guam" 
-START <- "2021-05-18"
-END <- "2021-06-02"
+RADIOID <- c(1,2,3,4,5)
+TIMEZONE <- "EST" 
+START <- "2024-04-12"
+END <- "2024-04-26"
 
 
 # Function to import raw beep data
