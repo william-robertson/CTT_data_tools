@@ -73,9 +73,16 @@ import.beeps <- function(INFILE, NODE.VERSION, RADIOID, TIMEZONE, START, END) {
   # count number of detections removed from Nodes not in the network
   count.nodes <-  count.import - count.ghosts - count.RadioId - sum(sapply(beep_data,nrow))
   
+  for (a in 1:length(beep_data)){
+    beep_data[[a]]$RadioId <- as.integer(beep_data[[a]]$RadioId)
+    beep_data[[a]]$TagRSSI <- as.integer(beep_data[[a]]$TagRSSI)
+    beep_data[[a]]$Validated <- as.integer(beep_data[[a]]$Validated)
+  }
+  
+  
   # Merge all of elements of the list into a dataframe and add an column - SensorId - which indicates the Sensor Station name
   BeepMerge <- dplyr::bind_rows(beep_data, .id = "SensorId")
-  
+   
   # Make a dataframe with dates exclude to see if certain nodes are potentially malfunctioning
   BadDates <- BeepMerge %>%
     dplyr::filter(!(Time.local >= start_range & Time.local <= seq(end_range + 1, end_range + 1, by = "1 day")))

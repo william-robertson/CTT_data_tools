@@ -70,9 +70,6 @@ str(tags)  # check that data imported properly
 nodes <- read.csv("Nodes.csv", header = T)
 str(nodes) # check that data imported properly
 
-
-
-
 ########### Run function to get beep data and a count of the detections removed at different steps #############
 
     ## Variables to define for function

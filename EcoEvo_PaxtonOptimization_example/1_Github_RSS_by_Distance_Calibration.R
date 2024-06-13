@@ -76,27 +76,27 @@ rm(list=ls())
 
 ## Set by User
 # Working Directory - Provide/path/on/your/computer/where/master/csv/file/of/nodes/is/found/and/where/Functions_CTT.Network.R/is/located
-working.directory <- " add here "
+working.directory <- "C:/Users/wor5079/OneDrive - The Pennsylvania State University/MASTERS/CTT/CTT_data_tools/EcoEvo_PaxtonOptimization_example"
 
 # Directory for Output data - Provide/path/where/you/want/output/data/to/be/stored/
-outpath <- " add here - make sure it ends with a /"
+outpath <- " C:/Users/wor5079/OneDrive - The Pennsylvania State University/MASTERS/CTT/CTT_data_tools/EcoEvo_PaxtonOptimization_example/calibration_output/"
 
 
 
 ## Bring in functions 
 setwd(working.directory)
-source("Functions_RSS.Based.Localizations.R")
+source("4_Functions_RSS.Based.Localizations.R")
 
 
 
 ## Bring in 3 Needed files - Test Information, RSS values, and Node Information - change file names in " " as needed
-test.info <- read.csv("Test.Info_Example.csv", header = T)
+test.info <- read.csv("TestInfo.csv", header = T)
 str(test.info) # check that data imported properly
 
-beep.dat <- readRDS("BeepData_Example.rds") 
+beep.dat <- readRDS("beep_data_2024-04-12_2024-04-26.rds") 
 str(beep.dat) # check that data imported properly
 
-nodes <- read.csv("Nodes_Example.csv", header = T)
+nodes <- read.csv("Nodes.csv", header = T)
 str(nodes)
 
 
@@ -137,7 +137,7 @@ str(nodes)
 ##******* Define Variables - replace values below with user specified values *******## 
 TEST.TYPE <- "Calibration"
 DATE.FORMAT <- "%m/%d/%y"
-TIME.ZONE <- "Pacific/Guam"
+TIME.ZONE <- "EST"
 
 
 # Combine RSS data from a node network with test information into a dataframe
