@@ -79,7 +79,7 @@ rm(list=ls())
 working.directory <- "C:/Users/wor5079/OneDrive - The Pennsylvania State University/MASTERS/CTT/CTT_data_tools/EcoEvo_PaxtonOptimization_example"
 
 # Directory for Output data - Provide/path/where/you/want/output/data/to/be/stored/
-outpath <- " C:/Users/wor5079/OneDrive - The Pennsylvania State University/MASTERS/CTT/CTT_data_tools/EcoEvo_PaxtonOptimization_example/calibration_output/"
+outpath <- "C:/Users/wor5079/OneDrive - The Pennsylvania State University/MASTERS/CTT/CTT_data_tools/EcoEvo_PaxtonOptimization_example/"
 
 
 
@@ -190,9 +190,9 @@ exp(coef(exp.mod)[["lrc"]])
 
 
 ##  ***** Variables to define for final model below - replace values below with values from exp.mod ****  ## 
-a <- -59
-S <- 0.004561831
-K <- -104.63033
+a <- -85.2788
+S <- 0.003616066
+K <- -96.8451
 
   
   # Final Model
