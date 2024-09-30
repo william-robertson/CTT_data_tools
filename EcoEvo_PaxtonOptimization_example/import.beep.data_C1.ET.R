@@ -46,6 +46,7 @@
 
 
 # packages needed
+
 library(dplyr)
 library(lubridate)
 
@@ -97,12 +98,13 @@ str(nodes) # check that data imported properly
 
 
 # Variables to define for function - replace values below with user specified values -
+gc()
 INFILE <- "C:/pg_Data/Data/PA Temperature Forest Turtles"
 NODE.VERSION <- 2
 RADIOID <- c(1,2,3,4,5)
 TIMEZONE <- "EST" 
-START <- "2024-06-09"
-END <- "2024-07-29"
+START <- "2024-06-27"
+END <- "2024-07-08"
 #played the date range safe by buffering each end
 
 # Function to import raw beep data
